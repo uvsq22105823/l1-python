@@ -19,7 +19,7 @@ def secondeEnTemps(tempssecondes):
     return (jours,heures,minutes,secondes)
 
 temps = secondeEnTemps(100000)
-print(temps[0],"jours", temps[1],"heures", temps[2],"minutes", temps[3],"secondes")
+print(temps[0],"jours\n",temps[1],"heures\n",temps[2],"minutes\n",temps[3],"secondes")
 
 
 
