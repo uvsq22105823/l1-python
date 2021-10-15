@@ -60,4 +60,45 @@ tempsrecu=(1,0,14,23)
 print(afficheTemps(tempsrecu)) 
 
 
+#demande et affichage d'un temps
+
+def demandeTemps(j, h, m, s):
+    if j<0:
+        print("veuillez entrer un nombre valable de jours")
+    elif j==1:
+        print(j,"jour")
+    else:
+        print(j,"jours")
+    if h>24:
+        print("veuillez indiquer un nombre valable d'heures (convertissez en jours)")
+    elif h<0:
+        print("veuillez indiquer un nombre d'heures valable")
+    elif h==1:
+        print(h,"heure")
+    else:
+        print(h,"heures")
+    if m>60:
+        print("veuillez entrer un nombre valable de minutes ( convertissez en heures etc..)")
+    elif m<0:
+        print("veuillez entrer un nombre valable de minutes")
+    elif m==1:
+        print(m,"minute")
+    else:
+        print(m,"minutes")
+    if s>60:
+        print("veuillez entrer un nombre valable de secondes ( convertissez en minutes, heures etc...")
+    elif s<0:
+        print("veuillez entrer un nombre de secondes valable")
+    elif s==1:
+        print(s,"seconde")
+    else:
+        print(s,"secondes")
+    return
+
+j=int(input("indiquez le nombre de jours\n"))
+h=int(input("indiquez le nombre d'heures\n"))
+m=int(input("indiquez le nombre de minutes\n"))
+s=int(input("indiquez le nombre de seconde\n"))
+
+demandeTemps(j,h,m,s)
 
