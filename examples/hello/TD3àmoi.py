@@ -102,3 +102,29 @@ s=int(input("indiquez le nombre de seconde\n"))
 
 demandeTemps(j,h,m,s)
 
+#additionner deux temps
+
+def sommeTemps(temps1,temps2):
+    jours=temps1[0]+temps2[0]
+    heures=temps1[1]+temps2[1]
+    minutes=temps1[2]+temps2[2]
+    secondes=temps1[3]+temps2[3]
+    if secondes>60:
+        while secondes>60:
+            secondes=secondes-60
+            minutes=minutes+1
+    if minutes>60:
+        while minutes>60:
+            minutes=minutes-60
+            heures=heures+1
+    if heures>24:
+        while heures>24:
+            heures=heures-24
+            jours=jours+1
+    print(jours,"jours")
+    print(heures,"heures")
+    print(minutes,"minutes")
+    print(secondes,"secondes")
+    return
+    
+sommeTemps((2,3,4,25),(5,22,57,1))
