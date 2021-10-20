@@ -66,13 +66,13 @@ def demandeTemps(demande):
     while True:
 
         j=int(input("Entre un nb de jours : "))
-        if j<=30 and j>=1:
+        if j<=30 and j>=0:
             h=int(input("entre un nb d'heures : "))
-        if h<=24 and h>=1:
+        if h<=24 and h>=0:
             m=int(input("entre un nb de minutes : "))
-        if m<=60 and m>=1:
+        if m<=60 and m>=0:
             s=int(input("entre un nb de secondes : "))
-        if s<=60 and s>=1:
+        if s<=60 and s>=0:
             return print(j,"jour(s)",h,"heure(s)",m,"minute(s)",s,"seconde(s)")
         else:
             print("erreur")
@@ -105,15 +105,17 @@ def sommeTemps(temps1,temps2):
     return
     
 sommeTemps((2,3,4,25),(5,22,57,1))
+print("/////////////////////////////////////////////////////////////////////////////////////////////////////////")
 
 
 #proportion d'un temps
 
-def proportionTemps(temps1,proportion):
-    nombreDeSecondes=tempsEnSeconde(temps1)
+def proportionTemps(temps3,proportion):
+    nombreDeSecondes=tempsEnSeconde(temps3)
     proportionDeSecondes=nombreDeSecondes*proportion
     tempsResultat=secondeEnTemps(proportionDeSecondes)
     return tempsResultat
-temps1=(2,0,36,0)
-proportion=int(0.2)
-proportionTemps(temps1,proportion)
+
+temps3=(2,0,36,0)
+proportion=(0.2)
+print(proportionTemps(temps3,proportion))
