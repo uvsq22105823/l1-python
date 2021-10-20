@@ -62,45 +62,22 @@ print(afficheTemps(tempsrecu))
 
 #demande et affichage d'un temps
 
-def demandeTemps(j, h, m, s):
-    if j<0:
-        print("veuillez entrer un nombre valable de jours")
-    elif j==1:
-        print(j,"jour")
-    else:
-        print(j,"jours")
-    if h>24:
-        print("veuillez indiquer un nombre valable d'heures (convertissez en jours)")
-    elif h<0:
-        print("veuillez indiquer un nombre d'heures valable")
-    elif h==1:
-        print(h,"heure")
-    else:
-        print(h,"heures")
-    if m>60:
-        print("veuillez entrer un nombre valable de minutes ( convertissez en heures etc..)")
-    elif m<0:
-        print("veuillez entrer un nombre valable de minutes")
-    elif m==1:
-        print(m,"minute")
-    else:
-        print(m,"minutes")
-    if s>60:
-        print("veuillez entrer un nombre valable de secondes ( convertissez en minutes, heures etc...")
-    elif s<0:
-        print("veuillez entrer un nombre de secondes valable")
-    elif s==1:
-        print(s,"seconde")
-    else:
-        print(s,"secondes")
-    return
+def demandeTemps(demande):
+    while True:
 
-j=int(input("indiquez le nombre de jours\n"))
-h=int(input("indiquez le nombre d'heures\n"))
-m=int(input("indiquez le nombre de minutes\n"))
-s=int(input("indiquez le nombre de seconde\n"))
-
-demandeTemps(j,h,m,s)
+        j=int(input("Entre un nb de jours : "))
+        if j<=30 and j>=1:
+            h=int(input("entre un nb d'heures : "))
+        if h<=24 and h>=1:
+            m=int(input("entre un nb de minutes : "))
+        if m<=60 and m>=1:
+            s=int(input("entre un nb de secondes : "))
+        if s<=60 and s>=1:
+            return print(j,"jour(s)",h,"heure(s)",m,"minute(s)",s,"seconde(s)")
+        else:
+            print("erreur")
+            break
+demandeTemps(print)
 
 #additionner deux temps
 
@@ -128,3 +105,15 @@ def sommeTemps(temps1,temps2):
     return
     
 sommeTemps((2,3,4,25),(5,22,57,1))
+
+
+#proportion d'un temps
+
+def proportionTemps(temps1,proportion):
+    nombreDeSecondes=tempsEnSeconde(temps1)
+    proportionDeSecondes=nombreDeSecondes*proportion
+    tempsResultat=secondeEnTemps(proportionDeSecondes)
+    return tempsResultat
+temps1=(2,0,36,0)
+proportion=int(0.2)
+proportionTemps(temps1,proportion)
