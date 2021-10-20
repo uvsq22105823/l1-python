@@ -112,7 +112,7 @@ print("/////////////////////////////////////////////////////////////////////////
 
 def proportionTemps(temps3,proportion):
     nombreDeSecondes=tempsEnSeconde(temps3)
-    proportionDeSecondes=nombreDeSecondes*proportion
+    proportionDeSecondes=int(nombreDeSecondes*proportion)
     tempsResultat=secondeEnTemps(proportionDeSecondes)
     return tempsResultat
 
