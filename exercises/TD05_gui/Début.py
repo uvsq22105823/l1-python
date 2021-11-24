@@ -17,4 +17,15 @@ bouton_choix=tk.Button(root,text="Choisis une couleur",command=root.destroy,reli
 bouton_choix.grid(row=1,column=4)
 
 canvas.grid(row=2,column=3,rowspan=3,columnspan=4)
+
+
+
+
+
+
+
+
+
+
+
 root.mainloop()
