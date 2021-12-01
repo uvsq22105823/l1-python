@@ -33,6 +33,18 @@ def dégradégris():
             draw_pixel(j,i,color=get_color(R,G,B))
 
 
+def dégradé2D():
+    for i in range(256):
+        for j in range(256):
+            R=i
+            G=0
+            B=j
+            draw_pixel(i,j,color=get_color(R,G,B))
+    
+    
+        
+
+
     
 
 
@@ -42,7 +54,7 @@ bouton_aléatoire.grid(row=1,column=1)
 bouton_dégradégris=tk.Button(root,text="dégradé gris",command=dégradégris,relief="groove")
 bouton_dégradégris.grid(row=3,column=1)
 
-bouton_dégradé2d=tk.Button(root,text="dégradé 2D",command=root.destroy,relief="groove")
+bouton_dégradé2d=tk.Button(root,text="dégradé 2D",command=dégradé2D,relief="groove")
 bouton_dégradé2d.grid(row=5,column=1)
 
 
