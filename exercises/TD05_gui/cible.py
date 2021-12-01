@@ -6,7 +6,7 @@ b=600
 root.geometry("600x600")
 canvas = tk.Canvas(root,width=a,height=b,bg="#000000")
 
-n=120
+n=200
 
 for i in range(n):
     colors=["blue","green","black","yellow","magenta","red"]
