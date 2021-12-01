@@ -1,31 +1,21 @@
 import tkinter as tk
+
+CANVAS_WIDTH, CANVAS_HEIGHT = 600, 400
+
+
 root = tk.Tk()
-root.title("coucou")
-root.geometry("600x600")
-canvas = tk.Canvas(root,width=600,height=600,bg="#000000")
 
-bouton_carré=tk.Button(root,text="Carré",command=root.destroy,bg="#22DD51",relief="groove")
-bouton_carré.grid(row=2,column=1)
+canvas = tk.Canvas(root, width = CANVAS_WIDTH, height = CANVAS_HEIGHT)
 
-bouton_cercle=tk.Button(root,text="Cercle",command=root.destroy,bg="#22DDC2",relief="groove")
-bouton_cercle.grid(row=3,column=1)
-
-bouton_croix=tk.Button(root,text="Croix",command=root.destroy,bg="#2279DD",relief="groove")
-bouton_croix.grid(row=4,column=1)
-
-bouton_choix=tk.Button(root,text="Choisis une couleur",command=root.destroy,relief="groove")
-bouton_choix.grid(row=1,column=4)
-
-canvas.grid(row=2,column=3,rowspan=3,columnspan=4)
-
-
-
-
-
-
-
-
-
-
-
+    # Début de votre code
+x0 = 100
+x1 = 400
+y = 300
+canvas.create_line(y, x0, y, x1)
+canvas.create_oval(y - 50, y+x0, y + 50, y)
+canvas.create_oval(y-50, y, y+50, y-x0)
+canvas.create_oval(y-50, y-x0, y + 50, y-2*x0)
+    
+    # Fin de votre code
+canvas.grid()
 root.mainloop()
