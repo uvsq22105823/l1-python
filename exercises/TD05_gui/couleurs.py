@@ -43,10 +43,6 @@ def dégradé2D():
     
 
 
-
-    
-
-
 bouton_aléatoire=tk.Button(root,text="Aléatoire",command=couleursaléatoires,relief="groove")
 bouton_aléatoire.grid(row=1,column=1)
 
