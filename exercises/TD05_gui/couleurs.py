@@ -41,8 +41,7 @@ def dégradé2D():
             B=j
             draw_pixel(i,j,color=get_color(R,G,B))
     
-    
-        
+
 
 
     
